@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Cụ Tạo Video Bất Động Sản AI - Veo 3 Prompt Generator Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .real-estate-bg {
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .sticky-toc {
+            position: sticky;
+            top: 20px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .character-card {
+            border-left: 4px solid #667eea;
+        }
+        .prompt-output {
+            font-family: 'Courier New', monospace;
+            background: #1a1a1a;
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 smooth-scroll">
+    <!-- Header -->
+    <header class="real-estate-bg text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold mb-2">
+                    <i class="fas fa-building mr-3"></i>
+                    Công Cụ Tạo Video Bất Động Sản AI
+                </h1>
+                <p class="text-xl opacity-90">Veo 3 Prompt Generator Pro - Chuyên nghiệp cho ngành BĐS</p>
+                <div class="mt-4 text-sm">
+                    <i class="fas fa-user-tie mr-2"></i>
+                    Phát triển bởi: <strong>Vũ Trọng Khải - 093 8811 050 - Marketing Bất Động Sản</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Table of Contents -->
+            <div class="lg:w-1/4">
+                <div class="sticky-toc bg-white rounded-lg shadow-lg p-6">
+                    <h2 class="text-xl font-bold mb-4 text-gray-800">
+                        <i class="fas fa-list mr-2"></i>
+                        Mục Lục
+                    </h2>
+                    <nav class="space-y-2 text-sm">
+                        <a href="#intro" class="block text-blue-600 hover:text-blue-800 py-1">
+                            <i class="fas fa-play mr-2"></i>1. Giới thiệu Prompt Veo 3 cho BĐS
+                        </a>
+                        <div class="ml-4 space-y-1">
+                            <a href="#what-is-prompt" class="block text-gray-600 hover:text-gray-800 py-1">1.1. Prompt Veo 3 là gì?</a>
+                            <a href="#why-important" class="block text-gray-600 hover:text-gray-800 py-1">1.2. Tại sao quan trọng trong BĐS?</a>
+                            <a href="#tool-features" class="block text-gray-600 hover:text-gray-800 py-1">1.3. Tính năng của công cụ</a>
+                        </div>
+                        
+                        <a href="#how-to-use" class="block text-blue-600 hover:text-blue-800 py-1">
+                            <i class="fas fa-cog mr-2"></i>2. Hướng dẫn sử dụng
+                        </a>
+                        <div class="ml-4 space-y-1">
+                            <a href="#step1" class="block text-gray-600 hover:text-gray-800 py-1">2.1. Bước 1: Thông tin cơ bản</a>
+                            <a href="#step2" class="block text-gray-600 hover:text-gray-800 py-1">2.2. Bước 2: Thêm nhân vật</a>
+                            <a href="#step3" class="block text-gray-600 hover:text-gray-800 py-1">2.3. Bước 3: Tạo prompt</a>
+                        </div>
+
+                        <a href="#prompt-generator" class="block text-green-600 hover:text-green-800 py-1 font-semibold">
+                            <i class="fas fa-magic mr-2"></i>3. Công Cụ Tạo Prompt
+                        </a>
+
+                        <a href="#best-practices" class="block text-blue-600 hover:text-blue-800 py-1">
+                            <i class="fas fa-lightbulb mr-2"></i>4. Best Practices cho BĐS
+                        </a>
+
+                        <a href="#examples" class="block text-blue-600 hover:text-blue-800 py-1">
+                            <i class="fas fa-eye mr-2"></i>5. Ví dụ thực tế
+                        </a>
+
+                        <a href="#faq" class="block text-blue-600 hover:text-blue-800 py-1">
+                            <i class="fas fa-question-circle mr-2"></i>6. Câu hỏi thường gặp
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="lg:w-3/4">
+                <!-- Introduction Section -->
+                <section id="intro" class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">
+                        <i class="fas fa-home mr-3 text-blue-600"></i>
+                        Giới thiệu Prompt Veo 3 cho Bất Động Sản
+                    </h2>
+
+                    <div id="what-is-prompt" class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                            <i class="fas fa-question mr-2"></i>1.1. Prompt Veo 3 là gì?
+                        </h3>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>Prompt Veo 3</strong> là đoạn văn bản mô tả chi tiết mà bạn nhập vào Google Veo 3 để tạo ra video bất động sản chuyên nghiệp. 
+                                Trong ngành BĐS, một prompt tốt có thể biến ý tưởng quảng cáo thành video cinematic thu hút khách hàng tiềm năng.
+                            </p>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-green-800 mb-2">
+                                    <i class="fas fa-check-circle mr-2"></i>Prompt tốt tạo ra:
+                                </h4>
+                                <ul class="text-sm text-green-700 space-y-1">
+                                    <li>• Video walkthrough chuyên nghiệp</li>
+                                    <li>• Góc quay flycam ấn tượng</li>
+                                    <li>• Cảm xúc kết nối với khách hàng</li>
+                                    <li>• Showcase đầy đủ tiện ích</li>
+                                </ul>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-red-800 mb-2">
+                                    <i class="fas fa-times-circle mr-2"></i>Prompt kém tạo ra:
+                                </h4>
+                                <ul class="text-sm text-red-700 space-y-1">
+                                    <li>• Video mờ nhạt, không thu hút</li>
+                                    <li>• Thiếu thông tin quan trọng</li>
+                                    <li>• Không phù hợp target khách hàng</li>
+                                    <li>• Góc quay không chuyên nghiệp</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="why-important" class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                            <i class="fas fa-chart-line mr-2"></i>1.2. Tại sao quan trọng trong BĐS?
+                        </h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
+                                <i class="fas fa-eye text-3xl text-blue-600 mb-2"></i>
+                                <h4 class="font-semibold text-blue-800">Thu hút khách hàng</h4>
+                                <p class="text-sm text-blue-700 mt-2">Video chất lượng cao tăng engagement rate lên 300%</p>
+                            </div>
+                            <div class="text-center p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-lg">
+                                <i class="fas fa-dollar-sign text-3xl text-green-600 mb-2"></i>
+                                <h4 class="font-semibold text-green-800">Tăng doanh số</h4>
+                                <p class="text-sm text-green-700 mt-2">Conversion rate tăng 85% khi sử dụng video tour</p>
+                            </div>
+                            <div class="text-center p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg">
+                                <i class="fas fa-clock text-3xl text-purple-600 mb-2"></i>
+                                <h4 class="font-semibold text-purple-800">Tiết kiệm thời gian</h4>
+                                <p class="text-sm text-purple-700 mt-2">Giảm 70% thời gian tạo video so với quay thật</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tool-features" class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                            <i class="fas fa-tools mr-2"></i>1.3. Tính năng của công cụ
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="space-y-3">
+                                <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                                    <i class="fas fa-building text-blue-600 mr-3"></i>
+                                    <span class="text-gray-700">Chuyên biệt cho 5+ loại hình BĐS</span>
+                                </div>
+                                <div class="flex items-center p-3 bg-green-50 rounded-lg">
+                                    <i class="fas fa-users text-green-600 mr-3"></i>
+                                    <span class="text-gray-700">Target 5 nhóm khách hàng chính</span>
+                                </div>
+                                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                                    <i class="fas fa-camera text-purple-600 mr-3"></i>
+                                    <span class="text-gray-700">6 góc quay chuyên nghiệp</span>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center p-3 bg-yellow-50 rounded-lg">
+                                    <i class="fas fa-palette text-yellow-600 mr-3"></i>
+                                    <span class="text-gray-700">5 phong cách video khác nhau</span>
+                                </div>
+                                <div class="flex items-center p-3 bg-red-50 rounded-lg">
+                                    <i class="fas fa-language text-red-600 mr-3"></i>
+                                    <span class="text-gray-700">Prompt chuẩn tiếng Anh</span>
+                                </div>
+                                <div class="flex items-center p-3 bg-indigo-50 rounded-lg">
+                                    <i class="fas fa-copy text-indigo-600 mr-3"></i>
+                                    <span class="text-gray-700">Copy prompt 1 click</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- How to Use Section -->
+                <section id="how-to-use" class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">
+                        <i class="fas fa-graduation-cap mr-3 text-green-600"></i>
+                        Hướng dẫn sử dụng công cụ
+                    </h2>
+
+                    <div class="space-y-8">
+                        <div id="step1" class="border-l-4 border-blue-500 pl-6">
+                            <h3 class="text-xl font-semibold mb-4 text-blue-700">
+                                <span class="bg-blue-500 text-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">1</span>
+                                Bước 1: Nhập thông tin cơ bản
+                            </h3>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">Thông tin cần thiết:</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li><strong>Loại BĐS:</strong> Chọn từ Căn hộ, Nhà phố, Đất nền, Văn phòng, Resort</li>
+                                    <li><strong>Đối tượng khách:</strong> Gia đình trẻ, Nhà đầu tư, Doanh nhân, Khách nước ngoài...</li>
+                                    <li><strong>Thời điểm:</strong> Sáng sớm, Hoàng hôn, Đêm về, Ngày nắng</li>
+                                    <li><strong>Cảm xúc:</strong> Ấm cúng, Sang trọng, Hiện đại, Tự nhiên</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="step2" class="border-l-4 border-green-500 pl-6">
+                            <h3 class="text-xl font-semibold mb-4 text-green-700">
+                                <span class="bg-green-500 text-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">2</span>
+                                Bước 2: Thêm nhân vật
+                            </h3>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">Các loại nhân vật phổ biến:</h4>
+                                <div class="grid md:grid-cols-2 gap-4 mt-3">
+                                    <div class="space-y-2">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                                            <span><strong>Môi giới BĐS:</strong> Tư vấn chuyên nghiệp</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <i class="fas fa-home text-green-600 mr-2"></i>
+                                            <span><strong>Gia đình:</strong> Trải nghiệm không gian sống</span>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-hard-hat text-orange-600 mr-2"></i>
+                                            <span><strong>Kiến trúc sư:</strong> Giải thích thiết kế</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <i class="fas fa-handshake text-purple-600 mr-2"></i>
+                                            <span><strong>Khách hàng:</strong> Chia sẻ cảm nhận</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="step3" class="border-l-4 border-purple-500 pl-6">
+                            <h3 class="text-xl font-semibold mb-4 text-purple-700">
+                                <span class="bg-purple-500 text-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">3</span>
+                                Bước 3: Tạo và sử dụng prompt
+                            </h3>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">Quy trình hoàn tất:</h4>
+                                <ol class="space-y-2 text-gray-700">
+                                    <li><strong>1.</strong> Nhấn "Tạo Prompt" → Hệ thống tự động tạo prompt tiếng Anh</li>
+                                    <li><strong>2.</strong> Copy prompt được tạo ra</li>
+                                    <li><strong>3.</strong> Dán vào Google Veo 3</li>
+                                    <li><strong>4.</strong> Chờ AI tạo video (2-3 phút)</li>
+                                    <li><strong>5.</strong> Tải video và sử dụng cho marketing</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Prompt Generator Tool -->
+                <section id="prompt-generator" class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">
+                        <i class="fas fa-magic mr-3 text-purple-600"></i>
+                        Công Cụ Tạo Prompt Veo 3
+                    </h2>
+
+                    <form id="promptForm" class="space-y-6">
+                        <!-- Basic Information -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <i class="fas fa-building mr-2"></i>Loại hình Bất Động Sản
+                                </label>
+                                <select id="propertyType" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="">Chọn loại hình BĐS</option>
+                                    <option value="apartment">Căn hộ chung cư</option>
+                                    <option value="house">Nhà phố/Biệt thự</option>
+                                    <option value="land">Đất nền/Dự án</option>
+                                    <option value="office">Văn phòng cho thuê</option>
+                                    <option value="resort">Khu nghỉ dưỡng/Resort</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <i class="fas fa-users mr-2"></i>Đối tượng khách hàng
+                                </label>
+                                <select id="targetAudience" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="">Chọn đối tượng khách hàng</option>
+                                    <option value="young-family">Gia đình trẻ</option>
+                                    <option value="investor">Nhà đầu tư</option>
+                                    <option value="businessman">Doanh nhân</option>
+                                    <option value="foreigner">Người nước ngoài</option>
+                                    <option value="luxury">Khách hàng cao cấp</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <i class="fas fa-sun mr-2"></i>Thời điểm quay
+                                </label>
+                                <select id="timeOfDay" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="">Chọn thời điểm</option>
+                                    <option value="morning">Sáng sớm</option>
+                                    <option value="golden-hour">Hoàng hôn (Golden Hour)</option>
+                                    <option value="night">Đêm về</option>
+                                    <option value="sunny-day">Ngày nắng đẹp</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <i class="fas fa-heart mr-2"></i>Cảm xúc/Tâm trạng
+                                </label>
+                                <select id="mood" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="">Chọn cảm xúc</option>
+                                    <option value="modern-luxury">Hiện đại & Sang trọng</option>
+                                    <option value="warm-cozy">Ấm cúng & Gần gũi</option>
+                                    <option value="professional">Chuyên nghiệp & Đẳng cấp</option>
+                                    <option value="natural">Tự nhiên & Thân thiện</option>
+                                    <option value="dynamic">Năng động & Trẻ trung</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <i class="fas fa-video mr-2"></i>Góc quay
+                                </label>
+                                <select id="cameraAngle" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="">Chọn góc quay</option>
+                                    <option value="drone">Flycam toàn cảnh</option>
+                                    <option value="walkthrough">Walkthrough nội thất</option>
+                                    <option value="closeup">Close-up chi tiết</option>
+                                    <option value="wide">Góc rộng kiến trúc</option>
+                                    <option value="aerial">Perspective từ trên cao</option>
+                                    <option value="cinematic">Cinematic chuyên nghiệp</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <i class="fas fa-clock mr-2"></i>Thời lượng video
+                                </label>
+                                <select id="duration" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="5">5 giây</option>
+                                    <option value="10" selected>10 giây</option>
+                                    <option value="15">15 giây</option>
+                                    <option value="20">20 giây</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Additional Context -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-edit mr-2"></i>Bối cảnh bổ sung (tùy chọn)
+                            </label>
+                            <textarea id="additionalContext" rows="3" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Ví dụ: Khu vực trung tâm thành phố, gần trường học, có view sông..."></textarea>
+                        </div>
+
+                        <!-- Characters Section -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4 text-gray-700">
+                                <i class="fas fa-user-friends mr-2"></i>Nhân vật trong video
+                            </h3>
+                            <div id="charactersContainer" class="space-y-4">
+                                <!-- Characters will be added here -->
+                            </div>
+                            <button type="button" id="addCharacter" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                                <i class="fas fa-plus mr-2"></i>Thêm Nhân Vật
+                            </button>
+                        </div>
+
+                        <!-- Generate Button -->
+                        <div class="text-center">
+                            <button type="submit" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-magic mr-2"></i>Tạo Prompt Veo 3
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Prompt Output -->
+                    <div id="promptOutput" class="mt-8 hidden">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-700">
+                            <i class="fas fa-code mr-2"></i>Prompt được tạo ra:
+                        </h3>
+                        <div class="relative">
+                            <pre id="generatedPrompt" class="prompt-output p-4 rounded-lg text-sm overflow-x-auto whitespace-pre-wrap"></pre>
+                            <button id="copyPrompt" class="absolute top-2 right-2 bg-gray-700 text-white px-3 py-1 rounded text-xs hover:bg-gray-600 transition-colors">
+                                <i class="fas fa-copy mr-1"></i>Copy
+                            </button>
+                        </div>
+                        <div class="mt-4 p-4 bg-green-50 rounded-lg">
+                            <h4 class="font-semibold text-green-800 mb-2">
+                                <i class="fas fa-lightbulb mr-2"></i>Cách sử dụng:
+                            </h4>
+                            <ol class="text-sm text-green-700 space-y-1">
+                                <li>1. Copy prompt bên trên</li>
+                                <li>2. Truy cập <a href="https://labs.google.com/veo" target="_blank" class="text-blue-600 hover:underline">Google Veo 3</a></li>
+                                <li>3. Dán prompt vào ô nhập liệu</li>
+                                <li>4. Nhấn "Generate" và chờ video được tạo</li>
+                                <li>5. Tải video về và sử dụng cho marketing BĐS</li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Best Practices -->
+                <section id="best-practices" class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">
+                        <i class="fas fa-star mr-3 text-yellow-600"></i>
+                        Best Practices cho BĐS
+                    </h2>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-semibold text-green-700">
+                                <i class="fas fa-check-circle mr-2"></i>Nên làm
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start p-3 bg-green-50 rounded-lg">
+                                    <i class="fas fa-arrow-right text-green-600 mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Highlight USP của dự án</h4>
+                                        <p class="text-sm text-gray-600">Tập trung vào điểm mạnh: view đẹp, vị trí đắc địa, tiện ích cao cấp</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start p-3 bg-green-50 rounded-lg">
+                                    <i class="fas fa-arrow-right text-green-600 mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Sử dụng lời thoại tiếng Việt</h4>
+                                        <p class="text-sm text-gray-600">Kết nối cảm xúc với khách hàng Việt thông qua ngôn ngữ mẹ đẻ</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start p-3 bg-green-50 rounded-lg">
+                                    <i class="fas fa-arrow-right text-green-600 mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Chọn thời điểm Golden Hour</h4>
+                                        <p class="text-sm text-gray-600">Ánh sáng tự nhiên tạo ra video cinematic và ấm áp</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-semibold text-red-700">
+                                <i class="fas fa-times-circle mr-2"></i>Không nên làm
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start p-3 bg-red-50 rounded-lg">
+                                    <i class="fas fa-times text-red-600 mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Prompt quá dài và phức tạp</h4>
+                                        <p class="text-sm text-gray-600">AI có thể hiểu sai hoặc bỏ qua các chi tiết quan trọng</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start p-3 bg-red-50 rounded-lg">
+                                    <i class="fas fa-times text-red-600 mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Không phù hợp target khách hàng</h4>
+                                        <p class="text-sm text-gray-600">Video căn hộ bình dân nhưng phong cách luxury sẽ không hiệu quả</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start p-3 bg-red-50 rounded-lg">
+                                    <i class="fas fa-times text-red-600 mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Thiếu cảm xúc và story</h4>
+                                        <p class="text-sm text-gray-600">Video chỉ show sản phẩm mà không tạo cảm xúc sẽ khó bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Examples -->
+                <section id="examples" class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">
+                        <i class="fas fa-play-circle mr-3 text-red-600"></i>
+                        Ví dụ Prompt thực tế
+                    </h2>
+
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-500 pl-6 bg-blue-50 p-4 rounded-r-lg">
+                            <h3 class="font-semibold text-blue-800 mb-2">
+                                <i class="fas fa-building mr-2"></i>Ví dụ 1: Căn hộ chung cư cao cấp
+                            </h3>
+                            <div class="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm overflow-x-auto">
+                                <pre>A cinematic walkthrough of a luxury apartment during golden hour, modern interior design with floor-to-ceiling windows overlooking the city skyline, warm lighting, professional real estate agent in elegant suit saying "Chào mừng bạn đến với căn hộ trong mơ của gia đình!", smooth camera movement, 10 seconds duration, high-end finish and amenities visible.</pre>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-green-500 pl-6 bg-green-50 p-4 rounded-r-lg">
+                            <h3 class="font-semibold text-green-800 mb-2">
+                                <i class="fas fa-home mr-2"></i>Ví dụ 2: Biệt thự gia đình
+                            </h3>
+                            <div class="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm overflow-x-auto">
+                                <pre>Drone aerial view of a beautiful family villa with garden, sunny morning light, young family with children playing in the backyard, father saying "Đây chính là ngôi nhà hoàn hảo cho gia đình chúng ta!", warm and cozy atmosphere, lush green landscape, swimming pool visible, 15 seconds duration.</pre>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-purple-500 pl-6 bg-purple-50 p-4 rounded-r-lg">
+                            <h3 class="font-semibold text-purple-800 mb-2">
+                                <i class="fas fa-briefcase mr-2"></i>Ví dụ 3: Văn phòng cho thuê
+                            </h3>
+                            <div class="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm overflow-x-auto">
+                                <pre>Professional office space showcase, modern minimalist design, natural lighting through large windows, business people working at desks, real estate consultant presenting saying "Không gian làm việc lý tưởng cho doanh nghiệp phát triển!", wide-angle shots of meeting rooms and common areas, 12 seconds duration.</pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ -->
+                <section id="faq" class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">
+                        <i class="fas fa-question-circle mr-3 text-orange-600"></i>
+                        Câu hỏi thường gặp
+                    </h2>
+
+                    <div class="space-y-4">
+                        <div class="border border-gray-200 rounded-lg">
+                            <button class="w-full text-left p-4 font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none faq-toggle">
+                                <i class="fas fa-chevron-down mr-2 faq-icon"></i>
+                                Công cụ này có miễn phí không?
+                            </button>
+                            <div class="faq-content hidden p-4 border-t bg-gray-50">
+                                <p class="text-gray-600">Có, công cụ tạo prompt hoàn toàn miễn phí. Tuy nhiên, để sử dụng Google Veo 3 tạo video, bạn cần có tài khoản Google Labs.</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 rounded-lg">
+                            <button class="w-full text-left p-4 font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none faq-toggle">
+                                <i class="fas fa-chevron-down mr-2 faq-icon"></i>
+                                Tôi có thể chỉnh sửa prompt sau khi tạo không?
+                            </button>
+                            <div class="faq-content hidden p-4 border-t bg-gray-50">
+                                <p class="text-gray-600">Có, bạn có thể copy prompt và chỉnh sửa theo ý muốn trước khi dán vào Veo 3. Công cụ chỉ tạo ra template cơ bản.</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 rounded-lg">
+                            <button class="w-full text-left p-4 font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none faq-toggle">
+                                <i class="fas fa-chevron-down mr-2 faq-icon"></i>
+                                Video được tạo có bản quyền không?
+                            </button>
+                            <div class="faq-content hidden p-4 border-t bg-gray-50">
+                                <p class="text-gray-600">Video được tạo bởi AI có thể sử dụng cho mục đích thương mại. Tuy nhiên, bạn nên kiểm tra điều khoản sử dụng của Google Veo 3.</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 rounded-lg">
+                            <button class="w-full text-left p-4 font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none faq-toggle">
+                                <i class="fas fa-chevron-down mr-2 faq-icon"></i>
+                                Tôi có thể tạo video dài hơn 20 giây không?
+                            </button>
+                            <div class="faq-content hidden p-4 border-t bg-gray-50">
+                                <p class="text-gray-600">Google Veo 3 hiện tại hỗ trợ tối đa 20-30 giây. Để có video dài hơn, bạn có thể tạo nhiều clip và ghép lại.</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 rounded-lg">
+                            <button class="w-full text-left p-4 font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none faq-toggle">
+                                <i class="fas fa-chevron-down mr-2 faq-icon"></i>
+                                Làm sao để video có chất lượng tốt nhất?
+                            </button>
+                            <div class="faq-content hidden p-4 border-t bg-gray-50">
+                                <p class="text-gray-600">Sử dụng prompt chi tiết nhưng không quá dài, chọn thời điểm Golden Hour, và mô tả rõ ràng về ánh sáng, góc quay, cảm xúc mong muốn.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="bg-gray-800 text-white rounded-lg p-8 text-center">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-bold mb-2">
+                            <i class="fas fa-user-tie mr-2"></i>
+                            Vũ Trọng Khải - 093 8811 050
+                        </h3>
+                        <p class="text-gray-300">Marketing Bất Động Sản</p>
+                        <p class="text-sm text-gray-400 mt-2">Chuyên gia tạo nội dung video quảng cáo BĐS bằng AI</p>
+                    </div>
+                    
+                    <div class="border-t border-gray-700 pt-4">
+                        <p class="text-sm text-gray-400">
+                            © 2024 Công Cụ Tạo Video Bất Động Sản AI. Phát triển với ❤️ cho cộng đồng BĐS Việt Nam.
+                        </p>
+                        <p class="text-xs text-gray-500 mt-2">
+                            Powered by Google Veo 3 AI Technology
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Character management
+        let characterCount = 0;
+
+        // Property type mappings
+        const propertyMappings = {
+            'apartment': 'luxury apartment',
+            'house': 'beautiful villa',
+            'land': 'development land plot',
+            'office': 'modern office space',
+            'resort': 'luxury resort property'
+        };
+
+        const audienceMappings = {
+            'young-family': 'young family with children',
+            'investor': 'professional investor',
+            'businessman': 'successful businessman',
+            'foreigner': 'international client',
+            'luxury': 'high-end luxury client'
+        };
+
+        const timeMappings = {
+            'morning': 'early morning with soft natural light',
+            'golden-hour': 'golden hour with warm sunset lighting',
+            'night': 'evening with ambient lighting',
+            'sunny-day': 'bright sunny day with clear sky'
+        };
+
+        const moodMappings = {
+            'modern-luxury': 'modern luxury with sophisticated elegance',
+            'warm-cozy': 'warm cozy atmosphere with family comfort',
+            'professional': 'professional upscale business environment',
+            'natural': 'natural friendly welcoming atmosphere',
+            'dynamic': 'dynamic energetic youthful vibe'
+        };
+
+        const cameraMappings = {
+            'drone': 'aerial drone shot with sweeping movements',
+            'walkthrough': 'smooth interior walkthrough with steady camera',
+            'closeup': 'detailed close-up shots of premium features',
+            'wide': 'wide-angle architectural shots',
+            'aerial': 'high-angle perspective shots',
+            'cinematic': 'cinematic camera movements with professional lighting'
+        };
+
+        // Add character function
+        document.getElementById('addCharacter').addEventListener('click', function() {
+            characterCount++;
+            const charactersContainer = document.getElementById('charactersContainer');
+            
+            const characterDiv = document.createElement('div');
+            characterDiv.className = 'character-card bg-gray-50 p-4 rounded-lg';
+            characterDiv.innerHTML = `
+                <div class="flex justify-between items-center mb-4">
+                    <h4 class="font-semibold text-gray-700">
+                        <i class="fas fa-user mr-2"></i>Nhân vật ${characterCount}
+                    </h4>
+                    <button type="button" class="text-red-500 hover:text-red-700 remove-character">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Tên nhân vật</label>
+                        <input type="text" class="character-name w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500" placeholder="Ví dụ: Chị Lan - Môi giới">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Vai trò</label>
+                        <select class="character-role w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500">
+                            <option value="agent">Môi giới BĐS</option>
+                            <option value="client">Khách hàng</option>
+                            <option value="family">Gia đình</option>
+                            <option value="architect">Kiến trúc sư</option>
+                            <option value="investor">Nhà đầu tư</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Mô tả ngoại hình & hành động</label>
+                        <textarea class="character-description w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500" rows="2" placeholder="Ví dụ: Người phụ nữ 30 tuổi, mặc vest chuyên nghiệp, tự tin giới thiệu căn hộ"></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Lời thoại (Tiếng Việt)</label>
+                        <textarea class="character-dialogue w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500" rows="2" placeholder="Ví dụ: Chào mừng bạn đến với căn hộ trong mơ của gia đình!"></textarea>
+                    </div>
+                </div>
+            `;
+            
+            charactersContainer.appendChild(characterDiv);
+            
+            // Add remove functionality
+            characterDiv.querySelector('.remove-character').addEventListener('click', function() {
+                characterDiv.remove();
+            });
+        });
+
+        // Form submission
+        document.getElementById('promptForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const propertyType = document.getElementById('propertyType').value;
+            const targetAudience = document.getElementById('targetAudience').value;
+            const timeOfDay = document.getElementById('timeOfDay').value;
+            const mood = document.getElementById('mood').value;
+            const cameraAngle = document.getElementById('cameraAngle').value;
+            const duration = document.getElementById('duration').value;
+            const additionalContext = document.getElementById('additionalContext').value;
+            
+            // Validate required fields
+            if (!propertyType || !targetAudience || !timeOfDay || !mood || !cameraAngle) {
+                alert('Vui lòng điền đầy đủ thông tin cơ bản!');
+                return;
+            }
+            
+            // Collect characters
+            const characters = [];
+            document.querySelectorAll('.character-card').forEach(card => {
+                const name = card.querySelector('.character-name').value;
+                const role = card.querySelector('.character-role').value;
+                const description = card.querySelector('.character-description').value;
+                const dialogue = card.querySelector('.character-dialogue').value;
+                
+                if (name && description) {
+                    characters.push({ name, role, description, dialogue });
+                }
+            });
+            
+            // Generate prompt
+            let prompt = `A ${cameraMappings[cameraAngle] || 'professional camera shot'} of ${propertyMappings[propertyType] || 'real estate property'} during ${timeMappings[timeOfDay] || 'daytime'}, showcasing ${moodMappings[mood] || 'appealing atmosphere'} designed for ${audienceMappings[targetAudience] || 'potential buyers'}`;
+            
+            if (additionalContext) {
+                prompt += `, located in ${additionalContext}`;
+            }
+            
+            // Add characters
+            if (characters.length > 0) {
+                prompt += `, featuring `;
+                characters.forEach((char, index) => {
+                    prompt += `${char.description}`;
+                    if (char.dialogue) {
+                        prompt += ` saying "${char.dialogue}"`;
+                    }
+                    if (index < characters.length - 1) {
+                        prompt += ', ';
+                    }
+                });
+            }
+            
+            prompt += `, ${duration} seconds duration, high-quality real estate marketing video, professional lighting, 4K resolution, smooth transitions, engaging and appealing to potential property buyers.`;
+            
+            // Display result
+            document.getElementById('generatedPrompt').textContent = prompt;
+            document.getElementById('promptOutput').classList.remove('hidden');
+            
+            // Scroll to result
+            document.getElementById('promptOutput').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Copy functionality
+        document.getElementById('copyPrompt').addEventListener('click', function() {
+            const prompt = document.getElementById('generatedPrompt').textContent;
+            navigator.clipboard.writeText(prompt).then(function() {
+                const button = document.getElementById('copyPrompt');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check mr-1"></i>Copied!';
+                button.classList.add('bg-green-600');
+                
+                setTimeout(function() {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-green-600');
+                }, 2000);
+            });
+        });
+        
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('.faq-icon');
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    content.classList.add('hidden');
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add default character
+        document.getElementById('addCharacter').click();
+    </script>
+</body>
+</html>
